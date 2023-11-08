@@ -1,5 +1,5 @@
 from enums import Direction
-from models import Table
+from models.table import Table
 
 
 class Robot:
@@ -38,4 +38,4 @@ class Robot:
         self.direction = Direction((self.direction.value + 1) % 4)
 
     def report(self):
-        return f"{self.x},{self.y},{self.direction.name}"
+        return f"{self.x},{self.y},{self.direction.name}" if self.x else None

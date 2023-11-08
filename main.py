@@ -22,11 +22,9 @@ def parse_command(command, robot: Robot):
 
 def main():
     robot = Robot(Table())
-    command_history = []
 
     while True:
         command = input("Enter a command: ")
-        command_history.append(command.upper())
         parse_command(command.upper(), robot)
 
 
